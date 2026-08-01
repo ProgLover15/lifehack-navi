@@ -166,7 +166,7 @@ const legalPages = [];
 for (const [buttonText, requiredText] of [
   ['利用規約', '第1条（サービス内容）'],
   ['プライバシー', 'Gemini API'],
-  ['特商法', 'Proプラン ¥680/月'],
+  ['特商法', '現在、限定ベータ版のため有料販売・課金を行っていません。'],
 ]) {
   const legal = await openPage(`http://127.0.0.1:3000/?legal=${encodeURIComponent(buttonText)}`);
   await legal.waitUntil(() => legal.evaluate(

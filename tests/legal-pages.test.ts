@@ -7,7 +7,7 @@ describe('legal pages', () => {
   const cases: Array<[LegalSlug, string, string]> = [
     ['terms', '利用規約', '第1条（サービス内容）'],
     ['privacy', 'プライバシーポリシー', 'Gemini API'],
-    ['tokusho', '特定商取引法に基づく表記', 'Proプラン ¥680/月'],
+    ['tokusho', '特定商取引法に基づく表記', '現在、限定ベータ版のため有料販売・課金を行っていません。'],
   ];
 
   it.each(cases)('%s renders its title and required content', (slug, title, content) => {
