@@ -33,7 +33,7 @@ const PAGES: Record<LegalSlug, { title: string; body: React.ReactNode }> = {
           <li>AI相談に入力したテキスト（Gemini API処理のため）</li>
           <li>アクセス元IPアドレス（不正利用防止のため）</li>
         </ul>
-        <p className="mt-4">第三者提供: Google（Gemini API）、Stripe（決済時）に必要な範囲で送信されます。</p>
+        <p className="mt-4">第三者提供: Google（Gemini API）はAI相談の処理に利用します。Stripeは現在利用しておらず、決済機能の開始時に必要な範囲で利用予定です。</p>
       </>
     ),
   },
@@ -55,9 +55,10 @@ const PAGES: Record<LegalSlug, { title: string; body: React.ReactNode }> = {
         <dl className="space-y-2 text-sm">
           <div><dt className="font-bold">販売事業者</dt><dd>{operatorName}</dd></div>
           <div><dt className="font-bold">連絡先</dt><dd>{operatorEmail}</dd></div>
-          <div><dt className="font-bold">販売価格</dt><dd>Proプラン ¥680/月（税込）</dd></div>
-          <div><dt className="font-bold">支払方法</dt><dd>クレジットカード（Stripe）</dd></div>
-          <div><dt className="font-bold">提供時期</dt><dd>決済確認後、パスコードをメール等で送付</dd></div>
+          <div><dt className="font-bold">販売状況</dt><dd>現在、限定ベータ版のため有料販売・課金を行っていません。</dd></div>
+          <div><dt className="font-bold">販売価格</dt><dd>有料プランの価格は、提供開始時に別途表示します。現在は購入できません。</dd></div>
+          <div><dt className="font-bold">支払方法</dt><dd>決済機能は現在未開始です。決済方法は、提供開始時に別途表示します。</dd></div>
+          <div><dt className="font-bold">提供時期</dt><dd>有料提供は現在未開始です。提供時期と利用方法は、提供開始時に別途表示します。</dd></div>
           <div><dt className="font-bold">返金</dt><dd>{refundPolicy}</dd></div>
         </dl>
         {(operatorName === '運営者名を設定してください' || operatorEmail === 'contact@example.com') && (

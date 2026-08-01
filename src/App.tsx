@@ -500,14 +500,14 @@ export default function App() {
             <span>ライフハックナビ Japan</span>
           </div>
           <p className="text-slate-500">
-            知らなかった日本の実用ワザに出会える。記事は無料、お金・制度の自分用確認は月3回まで（Proで無制限）。
+            知らなかった日本の実用ワザに出会える。記事は無料、Pro機能は限定ベータ中のため提供開始前です。
           </p>
           <div className="flex flex-wrap justify-center gap-3 text-[11px]">
             <button type="button" onClick={() => setLegalSlug('terms')} className="text-indigo-600 hover:underline cursor-pointer">利用規約</button>
             <button type="button" onClick={() => setLegalSlug('privacy')} className="text-indigo-600 hover:underline cursor-pointer">プライバシー</button>
             <button type="button" onClick={() => setLegalSlug('disclaimer')} className="text-indigo-600 hover:underline cursor-pointer">AI免責</button>
             <button type="button" onClick={() => setLegalSlug('tokusho')} className="text-indigo-600 hover:underline cursor-pointer">特商法</button>
-            <button type="button" onClick={() => openProModal()} className="text-indigo-600 hover:underline cursor-pointer font-bold">自分用 Pro ¥680/月</button>
+            <button type="button" onClick={() => openProModal()} className="text-indigo-600 hover:underline cursor-pointer font-bold">Pro機能（提供開始前）</button>
           </div>
           <p className="text-[11px] text-slate-400">
             © 2026 Lifehack Navi Japan Platform. All rights reserved.

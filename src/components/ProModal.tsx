@@ -69,8 +69,8 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
         )}
 
         <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-          <strong>¥680/月</strong> で、お金・制度・手続きを<strong>あなたの状況に合わせて</strong>無制限に聞けます。
-          読んだハックが自分に当てはまるか、追加で確認することもできます。記事閲覧は無料のままです。
+          現在、限定ベータ版のためProの有料提供・課金は開始していません。
+          提供開始時期、価格、決済方法は開始時に別途表示します。記事閲覧は無料です。
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4 text-[11px] text-slate-700">
           <div className="rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">記事閲覧は無料</div>
@@ -90,7 +90,7 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
           </a>
         ) : (
           <p className="text-xs text-slate-500 mb-4 bg-slate-50 p-3 rounded-xl">
-            購入リンクは準備中です。運営からパスコードを受け取った方は下に入力してください。
+            購入機能とパスコードの発行は、現在準備中です。
           </p>
         )}
 
