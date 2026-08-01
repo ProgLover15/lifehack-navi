@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: lifehack-navi
+    runtime: node
+    rootDir: .
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PRO_CODES
+        sync: false
+      - key: VITE_STRIPE_PAYMENT_LINK_URL
+        sync: false
+      - key: VITE_OPERATOR_NAME
+        sync: false
+      - key: VITE_OPERATOR_EMAIL
+        sync: false
+      - key: VITE_REFUND_POLICY
+        sync: false

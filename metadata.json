@@ -1,0 +1,6 @@
+{
+  "name": "ライフハックナビ",
+  "description": "PC・仕事・学校から料理・掃除・お金・法律・補助金まで、日本のあらゆるお役立ちライフハックに直感的にアクセスできる総合知恵袋プラットフォーム",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
