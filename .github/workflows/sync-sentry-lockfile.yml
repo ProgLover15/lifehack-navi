@@ -1,0 +1,32 @@
+name: Sync Sentry lockfile
+
+on:
+  push:
+    branches:
+      - obs/sentry-lifehack-20260922
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: obs/sentry-lifehack-20260922
+
+      - name: Add Sentry dependency and refresh lockfile
+        run: npm install @sentry/node --save-exact --package-lock-only --ignore-scripts
+
+      - name: Commit lockfile changes
+        run: |
+          if git diff --quiet -- package.json package-lock.json; then
+            echo "Package files already synchronized."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json
+          git commit -m "obs: add Sentry Node dependency"
+          git push origin HEAD:obs/sentry-lifehack-20260922
