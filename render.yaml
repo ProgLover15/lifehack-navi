@@ -12,6 +12,8 @@ services:
         sync: false
       - key: PRO_CODES
         sync: false
+      - key: SENTRY_DSN
+        sync: false
       - key: VITE_STRIPE_PAYMENT_LINK_URL
         sync: false
       - key: VITE_OPERATOR_NAME
