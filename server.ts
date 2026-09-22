@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import * as Sentry from '@sentry/node';
 import express from 'express';
 import path from 'path';
 import rateLimit from 'express-rate-limit';
@@ -15,6 +16,21 @@ export const app = express();
 const PORT = Number(process.env.PORT) || 3000;
 const MAX_SITUATION_LENGTH = 2000;
 const MAX_QUESTION_LENGTH = 1000;
+const SENTRY_DSN = process.env.SENTRY_DSN;
+
+if (SENTRY_DSN) {
+  Sentry.init({
+    dsn: SENTRY_DSN,
+    tracesSampleRate: 0.05,
+    sendDefaultPii: false,
+  });
+}
+
+function captureException(error: unknown): void {
+  if (SENTRY_DSN) {
+    Sentry.captureException(error);
+  }
+}
 
 app.set('trust proxy', 1);
 app.use(express.json({ limit: '32kb' }));
@@ -172,6 +188,7 @@ app.post('/api/consult', async (req, res) => {
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : 'AIコンシェルジュの通信中にエラーが発生しました。';
     console.error('AI Consult Error:', error);
+    captureException(error);
     res.status(500).json({ error: message });
   }
 });
@@ -215,6 +232,7 @@ app.post('/api/followup', async (req, res) => {
   } catch (error: unknown) {
     const message = error instanceof Error ? error.message : '追加質問の処理に失敗しました。';
     console.error('Followup Error:', error);
+    captureException(error);
     res.status(500).json({ error: message });
   }
 });
