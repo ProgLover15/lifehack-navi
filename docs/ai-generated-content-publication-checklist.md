@@ -22,7 +22,7 @@ ChatGPTなどで作った文章・画像・資料を、そのまま公開する�
 
 **購入:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00
 
-購入後の商品はZIPで提供されます。決済はStripeを利用します。
+決済はStripeを利用します。決済完了後、購入時のメールアドレスへZIPを自動送付します。
 
 ---
 
