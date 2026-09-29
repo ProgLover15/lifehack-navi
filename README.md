@@ -4,7 +4,11 @@
 
 ## 無料ガイド
 
-- [AI生成コンテンツを公開する前のチェックリスト](docs/ai-generated-content-publication-checklist.md) — 無料7項目版。詳細テンプレートはページ内のStripe直リンクから購入できます。
+- [AI生成コンテンツを公開する前のチェックリスト](docs/ai-generated-content-publication-checklist.md)
+- [ChatGPTの文章を公開する前のファクトチェック](docs/chatgpt-fact-check-before-publishing.md)
+- [AI生成コンテンツの著作権・個人情報 公開前チェック](docs/ai-content-copyright-privacy-check.md)
+
+各ページは無料版です。詳細テンプレートはページ内のStripe直リンクから購入できます。
 
 
 ## ローカル起動
