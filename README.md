@@ -2,13 +2,21 @@
 
 知らなかった日本の実用ワザに出会えるWebアプリ。記事閲覧は無料、お金・制度の自分用確認は Pro（¥680/月）。
 
-## 無料ガイド
+## AIへ仕事を任せる前後のチェック
+
+AIの出力を「それっぽいから完了」にせず、入力の正本・取得時点・権限境界・合格条件・未確認事項・停止条件まで残すための小さな運用テンプレートを扱っています。
+
+無料で使える入口:
 
 - [AI生成コンテンツを公開する前のチェックリスト](docs/ai-generated-content-publication-checklist.md)
 - [ChatGPTの文章を公開する前のファクトチェック](docs/chatgpt-fact-check-before-publishing.md)
 - [AI生成コンテンツの著作権・個人情報 公開前チェック](docs/ai-content-copyright-privacy-check.md)
 
-各ページは無料版です。詳細テンプレートはページ内のStripe直リンクから購入できます。
+有料版（500円・買い切り）は、**AI作業の準備チェックリスト / AI出力の検収記録票 / 使い方ガイド**の3ファイルです。
+
+**購入:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00
+
+決済完了後、購入時のメールアドレスへZIPを自動送付します。
 
 
 ## ローカル起動
