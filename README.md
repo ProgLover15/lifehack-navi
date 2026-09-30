@@ -14,7 +14,7 @@ AIの出力を「それっぽいから完了」にせず、入力の正本・取
 
 有料版（500円・買い切り）は、**AI作業の準備チェックリスト / AI出力の検収記録票 / 使い方ガイド**の3ファイルです。
 
-**購入:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00
+**購入:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00?utm_source=github&utm_medium=organic&utm_campaign=ai_ops_checklist&utm_content=readme&client_reference_id=github_readme
 
 決済完了後、購入時のメールアドレスへZIPを自動送付します。
 
