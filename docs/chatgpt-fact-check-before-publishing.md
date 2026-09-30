@@ -28,7 +28,7 @@ AIの文章は読みやすくても、固有名詞・数字・日付・制度・
 
 「AIがそれらしい文章を出したから完了」にせず、**何を確認できていて、何が未確認かを残すための小さな運用テンプレート**です。
 
-**500円・買い切り:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00
+**500円・買い切り:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00?utm_source=github&utm_medium=organic&utm_campaign=ai_ops_checklist&utm_content=fact_check&client_reference_id=github_fact_check
 
 決済はStripeを利用します。決済完了後、購入時のメールアドレスへZIPを自動送付します。
 
