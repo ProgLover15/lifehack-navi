@@ -91,7 +91,7 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
             value={code}
             onChange={(e) => setCode(e.target.value)}
             onKeyDown={(e) => { if (e.key === 'Enter') void handleVerify(); }}
-            placeholder="購入後に届くコード"
+            placeholder="案内済みのベータコード"
             className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:border-indigo-500"
           />
           {error && <p className="text-xs text-red-600">{error}</p>}
