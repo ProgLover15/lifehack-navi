@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Sparkles, X, ExternalLink, KeyRound, Loader2 } from '../utils/icons';
+import { Sparkles, X, KeyRound, Loader2 } from '../utils/icons';
 import { setProToken } from '../lib/usage';
 
 interface ProModalProps {
@@ -14,7 +14,6 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const paymentLink = import.meta.env.VITE_STRIPE_PAYMENT_LINK_URL as string | undefined;
 
   if (!open) return null;
 
@@ -69,8 +68,8 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
         )}
 
         <p className="text-sm text-slate-600 mb-4 leading-relaxed">
-          現在、限定ベータ版のためProの有料提供・課金は開始していません。
-          提供開始時期、価格、決済方法は開始時に別途表示します。記事閲覧は無料です。
+          現在、ライフハックナビ Pro は限定ベータ版で、有料販売・課金は開始していません。
+          ベータ利用者は案内済みのコードで利用できます。記事閲覧は無料です。
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-4 text-[11px] text-slate-700">
           <div className="rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">記事閲覧は無料</div>
@@ -78,21 +77,9 @@ export const ProModal: React.FC<ProModalProps> = ({ open, onClose, onActivated, 
           <div className="rounded-xl bg-slate-50 border border-slate-200 px-3 py-2">ハックを自分用に確認</div>
         </div>
 
-        {paymentLink ? (
-          <a
-            href={paymentLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full mb-4 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-teal-500 text-white font-bold text-sm hover:opacity-95 transition-opacity"
-          >
-            <ExternalLink className="w-4 h-4" />
-            StripeでProを購入する
-          </a>
-        ) : (
-          <p className="text-xs text-slate-500 mb-4 bg-slate-50 p-3 rounded-xl">
-            購入機能とパスコードの発行は、現在準備中です。
-          </p>
-        )}
+        <p className="text-xs text-slate-500 mb-4 bg-slate-50 p-3 rounded-xl">
+          Proの一般販売は現在行っていません。別途販売中のデジタル商品とは異なるサービスです。
+        </p>
 
         <div className="space-y-2">
           <label className="text-xs font-bold text-slate-700 flex items-center gap-1">
