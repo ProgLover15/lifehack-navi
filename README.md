@@ -14,7 +14,7 @@
 
 **購入:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00?utm_source=github&utm_medium=organic&utm_campaign=ai_ops_checklist&utm_content=readme&client_reference_id=github_readme
 
-決済完了後、購入時のメールアドレスへZIPを自動送付します。
+決済完了後はStripeの転送先からZIPのダウンロードへ進む構成です。
 
 無料で確認できる入口:
 
