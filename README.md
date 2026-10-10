@@ -18,6 +18,8 @@
 
 無料で確認できる入口:
 
+- [AIに仕事を任せる前後の無料チェックリスト（Web向け公開ページ）](public/ai-ops-checklist/index.html) — デプロイ後のパス: `/ai-ops-checklist/`。有料商品へのリンクには流入元タグを付けています。
+
 - [AI生成コンテンツを公開する前のチェックリスト](docs/ai-generated-content-publication-checklist.md)
 - [ChatGPTの文章を公開する前のファクトチェック](docs/chatgpt-fact-check-before-publishing.md)
 - [AI生成コンテンツの著作権・個人情報 公開前チェック](docs/ai-content-copyright-privacy-check.md)
