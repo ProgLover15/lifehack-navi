@@ -507,6 +507,7 @@ export default function App() {
             <button type="button" onClick={() => setLegalSlug('privacy')} className="text-indigo-600 hover:underline cursor-pointer">プライバシー</button>
             <button type="button" onClick={() => setLegalSlug('disclaimer')} className="text-indigo-600 hover:underline cursor-pointer">AI免責</button>
             <button type="button" onClick={() => setLegalSlug('tokusho')} className="text-indigo-600 hover:underline cursor-pointer">特商法</button>
+            <a href="/ai-ops-checklist/" className="text-indigo-600 hover:underline font-bold">AI作業の無料チェックリスト</a>
             <button type="button" onClick={() => openProModal()} className="text-indigo-600 hover:underline cursor-pointer font-bold">Pro機能（提供開始前）</button>
           </div>
           <p className="text-[11px] text-slate-400">
