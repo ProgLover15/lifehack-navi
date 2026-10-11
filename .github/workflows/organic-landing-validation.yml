@@ -1,0 +1,43 @@
+name: Organic landing validation
+
+on:
+  pull_request:
+    branches: [master]
+    paths:
+      - 'public/ai-ops-checklist/**'
+      - 'docs/**'
+      - 'README.md'
+      - 'src/App.tsx'
+      - 'tests/marketing-landing.test.ts'
+      - 'package.json'
+      - 'package-lock.json'
+      - '.github/workflows/organic-landing-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: organic-landing-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run lint
+      - run: npm run build
+      - name: Refuse stale email-ZIP delivery claims
+        run: |
+          if grep -nE 'メールアドレスへZIPを自動送付|購入時のメールアドレスへZIP' docs/*.md README.md public/ai-ops-checklist/index.html; then
+            echo 'Stale fulfillment claim detected; block publication.'
+            exit 1
+          fi
