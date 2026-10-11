@@ -27,7 +27,7 @@ AIで作った文章・画像・資料を公開するとき、内容の正しさ
 
 **500円・買い切り:** https://buy.stripe.com/5kQcN55DLehn50jdRLdAk00?utm_source=github&utm_medium=organic&utm_campaign=ai_ops_checklist&utm_content=copyright_privacy&client_reference_id=github_copyright_privacy
 
-決済はStripeを利用します。決済完了後、購入時のメールアドレスへZIPを自動送付します。
+決済はStripeを利用します。決済完了後はStripeの転送先からZIPのダウンロードへ進む構成です。購入後の受取動作の本番検証は未完了です。
 
 ---
 
